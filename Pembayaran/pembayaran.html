@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="tailwindcss-colors.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Payment Page</title>
+</head>
+<body>
+    
+    <!-- start: Payment -->
+    <section class="payment-section">
+        <div class="container">
+            <div class="payment-wrapper">
+                <div class="payment-left">
+                    <div class="payment-header">
+                        <div class="payment-header-icon"><i class="ri-flashlight-fill"></i></div>
+                        <div class="payment-header-title">Order Summary</div>
+                        <p class="payment-header-description">Lengkapi form berikut lalu tekan simpan maka akan muncul barcode pembayaran</p>
+                    </div>
+                    <form action="simpan-pembayaran" class="payment-form">
+                        <div class="payment-form-group">
+                            <input type="text" placeholder=" " class="payment-form-control" id="alamatUser">
+                            <label for="alamatUser" class="payment-form-label payment-form-label-required">Alamat Tujuan</label>
+                        </div>
+                        <div class="payment-form-group">
+                            <label for="lokasi" class="payment-form-label payment-form-label-required">Kota/Kabupaten</label>
+                            <select name="lokasi" id="lokasi"class="payment-form-control" >
+                              <option value="Seleman">Seleman</option>
+                              <option value="Bantul">Bantul</option>
+                              <option value="Jogja">Jogja</option>
+                            </select>
+                     
+                        </div>
+                        <div class="payment-form-group-flex">
+                            <div class="payment-form-group">
+                                <input type="date" placeholder=" " class="payment-form-control" id="startDate">
+                                <label for="startDate" class="payment-form-label payment-form-label-required">Mulai Berlangganan</label>
+                            </div>
+                            <div class="payment-form-group">
+                                <input type="date" placeholder=" " class="payment-form-control" id="endDate">
+                                <label for="endDate" class="payment-form-label payment-form-label-required">Akhir Berlangganan</label>
+                            </div>
+                        </div>
+                        <button id="simpan" type="submit" class="payment-form-submit-button"><i class="ri-wallet-line"></i> Simpan</button>
+                    </form>
+                    <span>   </span>
+                    <div class="payment-content">
+                        <div class="payment-body">
+                            <div class="payment-plan">
+                                <div class="payment-plan-type">foto</div>
+                                <div class="payment-plan-info">
+                                    <div class="payment-plan-info-name">Diaabetes</div>
+                                    <div class="payment-plan-info-price">Ayam Rendah Lemak</div>
+                                </div>
+                                <a href="#" class="payment-plan-change">Ubah Pesanan</a>
+                            </div>
+                            <div class="payment-summary">
+                                <div class="payment-summary-item">
+                                    <div class="payment-summary-name">Ayam Rendah Lemak</div>
+                                    <div class="payment-summary-price">34000</div>
+                                </div>
+                                <div class="payment-summary-item">
+                                    <div class="payment-summary-name">Additional fee</div>
+                                    <div class="payment-summary-price">1000</div>
+                                </div>
+                                <div class="payment-summary-divider"></div>
+                                <div class="payment-summary-item payment-summary-total">
+                                    <div class="payment-summary-name">Total</div>
+                                    <div class="payment-summary-price">35000</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="payment-right">
+                    <form action="" class="payment-form">
+                        <h1 class="payment-title">Payment Details</h1>
+                       
+                        <div class="payment-form-group">
+                            <img src="images/qr.jpg" height="300px" width="300px" alt="">
+                        </div>
+                        
+                        <button type="submit" class="payment-form-submit-button"><i class="ri-wallet-line"></i> Pay</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end: Payment -->
+
+</body>
+</html>
